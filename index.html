@@ -29,7 +29,7 @@
         <div id = "navbar">
             <div class="topnav">
                 <a href="index.html">Home</a>
-                <a href="#news">Battery</a>
+                <a href="battery_page.html">Battery</a>
                 <a href="#contact">Motors</a>
                 <a href="#about">Solar</a>
               </div>
@@ -40,6 +40,8 @@
         </div>
         <div class = "linegraph" id="batteryRemaining"></div>
         <div id = "mph">
+        </div>
+        <div class = "linegraph" id="tempature">
         </div>
 
     </body>
@@ -79,7 +81,7 @@ var layout = {
                    yaxis: {
                            fixedrange: true
                           },
-                   xaxis : {
+                   xaxis: {
                             fixedrange: true
                             }
                             
@@ -89,6 +91,33 @@ var layout = {
 var data = [ trace3];
 
 Plotly.newPlot('batteryRemaining', data,layout,{title: "SPEED"});
+
+var trace4 = {
+x: [1,2,3,4],
+y: [14,24,34,44],
+name: "Tempature degree(C/F)"
+};
+var layout = {
+title: "Tempature Celsius",
+             yaxis: {
+                  fixedrange: true
+             },
+             xaxis: {
+                 fixedrange: true
+                 }
+
+             };
+
+var data = [ trace4];
+
+Plotly.newPlot('tempature',data,layout,{title: "SPEED"});
+
+
+
+
+
+
+
 
 </script>
 
